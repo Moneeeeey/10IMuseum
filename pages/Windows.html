@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> 10I Museum </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/img/10I.png">
+        <link rel="stylesheet" href="/css/stylesheet.css">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        
+    </head>
+
+    <body id="bodyhomepage">
+      <div id="outlinee"> </div>
+    
+        <div id="DivWindows">
+                <a href="/index.html">
+                    <img id="logowindows" src="/img/10Ipng.png" draggable="false" />
+                </a>
+               
+                    <img id="windows" src="/img/Windows98NEWWW.jpg" draggable="false" />
+
+                    
+                
+        </div id="WindowsPage">
+        
+        <img id="paint" class="draggable-box" draggable="true" src="/img/PaintpngNEWWW.png"  />
+      
+        <img id="explorer" class="draggable-box" draggable="true" src="/img/InternetExplorer.png" /> 
+      
+        <img id="games" class="draggable-box" draggable="true"  src="/img/GamesNEw.png"/> 
+
+        <img id="clippy" src="/img/Clippynew.png" draggable="false"/>
+
+        <img id="Stikcy" class="draggable-box" draggable="true" src="/img/stickynotesN.png" />
+
+        <img id="Windowsicon" class="draggable-box" draggable="true" src="/img/windows-7-logo-6718525_128.png" /> 
+
+
+        <div id="myPopup" class="popup">
+            <div class="popup-content">
+                    <h2>
+                      <i> CLIPPY! </i>
+                    </h2>
+                <p><b> Who is the Creator? </b></p>
+                <p>What is this project? </p>
+                <p>What is 10I?</p>
+                <p>Instagram</p>
+                <button id="closePopup" style="display: none;">
+                      Close
+                  </button>
+            </div>
+        </div>
+
+
+
+
+
+        <script>
+            /* Code was found at W3 Schools */
+
+            
+
+            let offsetX, offsetY, draggedElement;
+
+document.addEventListener("dragstart", function (event) {
+  draggedElement = event.target;
+  offsetX = event.clientX - draggedElement.getBoundingClientRect().left;
+  offsetY = event.clientY - draggedElement.getBoundingClientRect().top;
+});
+
+document.addEventListener("dragover", function (event) {
+  event.preventDefault();
+});
+
+document.addEventListener("drop", function (event) {
+  event.preventDefault();
+  if (draggedElement) {
+    draggedElement.style.left = event.clientX - offsetX + "px";
+    draggedElement.style.top = event.clientY - offsetY + "px";
+    
+
+  }
+});
+
+document.addEventListener("dragend", function () {
+  draggedElement = null;
+  offsetX = 0;
+  offsetY = 0;
+});
+
+
+
+
+
+clippy.addEventListener("click", function () {
+            myPopup.classList.add("show");
+        });
+        closePopup.addEventListener("click", function () {
+            myPopup.classList.remove("show");
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopup) {
+                myPopup.classList.remove("show");
+            }
+        });
+
+
+
+
+
+
+
+
+       
+
+
+
+
+        
+        
+        </script>
+    </body>
+
+    
+</html>
