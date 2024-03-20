@@ -170,8 +170,8 @@ a {
     align-items: center;
     position: absolute ;
     z-index: 999;
-    left: 75rem;
-    top:42rem; 
+    left: 80%;
+    top:80%; 
 }
 
 .popup {
