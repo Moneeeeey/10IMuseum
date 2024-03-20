@@ -23,8 +23,9 @@ h1{
     font-family: "JetBrains Mono", monospace;
     position: absolute;
     z-index: 119;
-    margin-left: 6.4%;
-    margin-top: 8%;
+    /* margin-left: 6.4%;
+    margin-top: 8%; */
+    text-align: center;
     mix-blend-mode: exclusion;
     
 }
@@ -158,6 +159,12 @@ a {
     top: 83%;
     z-index: 10;
 
+}
+
+#centered-link {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
 }
 
 .draggable-box{
