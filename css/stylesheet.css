@@ -112,6 +112,7 @@ a {
     padding: 0;
     display: block; 
     object-fit:cover ;
+    filter: saturate(80%)
     
 }
 
@@ -158,10 +159,7 @@ a {
     z-index: 10;
 
 }
-#CLippyGif{
-    width: 300px;
-    margin-left: 230px;
-}
+
 .draggable-box{
     position: absolute;
     cursor: grab;
@@ -169,11 +167,11 @@ a {
 #clippy{
     width: 300px; 
     height: auto;
-   align-items: center;
+    align-items: center;
     position: absolute ;
     z-index: 999;
-    left: 140vh;
-    top:78vh; 
+    left: 75rem;
+    top:42rem; 
 }
 
 .popup {
