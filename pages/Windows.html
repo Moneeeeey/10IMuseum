@@ -10,8 +10,8 @@
         <title> 10I Museum </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="/img/10I.png">
-        <link rel="stylesheet" href="/css/stylesheet.css">
+        <link rel="icon" href="../img/10I.png">
+        <link rel="stylesheet" href="../css/stylesheet.css">
 
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,9 +34,9 @@
                 
         </div id="WindowsPage">
         
-        <img id="paint" class="draggable-box" draggable="true" src="/img/PaintpngNEWWW.png"  />
+        <img id="paint" class="draggable-box" draggable="true" src="../img/PaintpngNEWWW.png"  />
       
-        <img id="explorer" class="draggable-box" draggable="true" src="/img/InternetExplorer.png" /> 
+        <img id="explorer" class="draggable-box" draggable="true" src="../img/InternetExplorer.png" /> 
       
         <img id="games" class="draggable-box" draggable="true"  src="/img/GamesNEw.png"/> 
 
@@ -47,7 +47,7 @@
         <img id="Windowsicon" class="draggable-box" draggable="true" src="/img/windows-7-logo-6718525_128.png" /> 
 
 
-        <div id="myPopup" class="popup">
+        <div id="clippyPopup" class="popup">
             <div class="popup-content">
                     <h2>
                       <i> CLIPPY! </i>
@@ -56,11 +56,50 @@
                 <p>What is this project? </p>
                 <p>What is 10I?</p>
                 <p>Instagram</p>
-                <button id="closePopup" style="display: none;">
-                      Close
-                  </button>
             </div>
         </div>
+
+
+        <div id="paintPopup" class="popup">
+          <div class="popup-content">
+                  <h2>
+                    <i> PAINT! </i>
+                  </h2>
+              <p><b> Who is the Creator? </b></p>
+              <p>What is this project? </p>
+              <p>What is 10I?</p>
+              <p>Instagram</p>
+          </div>
+      </div>
+
+      
+        
+      <div id="explorerPopup" class="popup">
+        <div class="popup-content">
+                <h2>
+                  <i> Internet Explorer! </i>
+                </h2>
+            <p><b> Who is the Creator? </b></p>
+            <p>What is this project? </p>
+            <p>What is 10I?</p>
+            <p>Instagram</p>
+        </div>
+    </div>
+
+
+
+
+    <div id="GamesPopup" class="popup">
+      <div class="popup-content">
+              <h2>
+                <i> Games </i>
+              </h2>
+          <p><b> Who is the Creator? </b></p>
+          <p>What is this project? </p>
+          <p>What is 10I?</p>
+          <p>Instagram</p>
+      </div>
+  </div>
 
 
 
@@ -104,27 +143,50 @@ document.addEventListener("dragend", function () {
 
 
 clippy.addEventListener("click", function () {
-            myPopup.classList.add("show");
+            clippyPopup.classList.add("show");
         });
-        closePopup.addEventListener("click", function () {
-            myPopup.classList.remove("show");
-        });
+
         window.addEventListener("click", function (event) {
-            if (event.target == myPopup) {
-                myPopup.classList.remove("show");
+            if (event.target == clippyPopup) {
+                clippyPopup.classList.remove("show");
             }
         });
 
 
+paint.addEventListener("click", function () {
+    paintPopup.classList.add("show");
+});
+
+    window.addEventListener("click", function (event) {
+    if (event.target == paintPopup) {
+        paintPopup.classList.remove("show");
+    }
+    });
 
 
 
+    explorer.addEventListener("click", function () {
+    explorerPopup.classList.add("show");
+});
 
+    window.addEventListener("click", function (event) {
+    if (event.target == explorerPopup) {
+      explorerPopup.classList.remove("show");
+    }
+    });
 
 
        
 
+    games.addEventListener("click", function () {
+      GamesPopup.classList.add("show");
+});
 
+    window.addEventListener("click", function (event) {
+    if (event.target == GamesPopup) {
+      GamesPopup.classList.remove("show");
+    }
+    });
 
 
         
