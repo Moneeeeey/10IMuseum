@@ -283,7 +283,7 @@ p {
     place-items: center;
     position: absolute;
     z-index: 10;
-    margin-left: 14rem;
+    margin-left: 27%;
     margin-top: 1rem;
 }
 #behanceicon{
@@ -296,7 +296,7 @@ p {
 }
 #linkedinicon{
     width: 60px;
-    margin-left: 22rem;
+    margin-left: 46%;
     margin-top: 1rem;
 }
 #paintwindows{
