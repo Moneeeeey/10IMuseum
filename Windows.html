@@ -44,45 +44,53 @@
 
         <img id="Stikcy" class="draggable-box" draggable="true" src="img/stickynotesN.png" />
 
-        <img id="Windowsicon" class="draggable-box" draggable="true" src="img/windows-7-logo-6718525_128.png" /> 
+        <!--  <img id="Windowsicon" class="draggable-box" draggable="true" src="img/windows-7-logo-6718525_128.png" /> -->
 
 
         <div id="clippyPopup" class="popup">
             <div class="popup-content">
-                    <h2>
-                      <i> CLIPPY! </i>
+                    <h2 style="margin-top: 20px; text-align: center; ">
+                      <i> CLIPPY </i>
                     </h2>
                 <p><b> Who is the Creator? </b></p>
                 <p>What is this project? </p>
                 <p>What is 10I?</p>
-                <p>Instagram</p>
+                <img id="instagramicon" src="img/icons8-instagram-240.png"  draggable="false">
+                <img id="behanceicon" src="img/icons8-behance-240.png"  draggable="false">
+                <img id="linkedinicon" src="img/icons8-linkedin-240.png"  draggable="false">
             </div>
         </div>
 
 
         <div id="paintPopup" class="popup">
-          <div class="popup-content">
-                  <h2>
+          <div id="popup-contentpaint">
+                  <h2 style="margin-top: 40px; text-align: right; margin-right: 5%;">
+                    <img id="paintwindows"  src="img/PaintpngNEWWW.png"  />
                     <i> PAINT! </i>
                   </h2>
-              <p><b> Who is the Creator? </b></p>
-              <p>What is this project? </p>
-              <p>What is 10I?</p>
-              <p>Instagram</p>
+                    <canvas id="paintCanvas" width="1130" height="460"> </canvas>
+                    <div id="Colors">
+                      <div class="color-box" style="background-color: #3D3D3D;" data-color="#3D3D3D"></div>
+                      <div class="color-box" style="background-color: #B8B8B8;" data-color="#B8B8B8"></div>
+                      <div class="color-box" style="background-color: #d50a00;" data-color="#d50a00"></div>
+                      <div class="color-box" style="background-color: #FF231C;" data-color="#FF231C"></div>
+
+
+                    
+
+
+                    </div>
           </div>
       </div>
 
       
         
       <div id="explorerPopup" class="popup">
-        <div class="popup-content">
-                <h2>
-                  <i> Internet Explorer! </i>
+        <div id="popup-contentexplorer">
+                <h2 style="margin-top: 3%; color: #d50a00;">
+                  <i> Internet Explorer </i>
                 </h2>
-            <p><b> Who is the Creator? </b></p>
-            <p>What is this project? </p>
-            <p>What is 10I?</p>
-            <p>Instagram</p>
+          
         </div>
     </div>
 
@@ -94,10 +102,8 @@
               <h2>
                 <i> Games </i>
               </h2>
-          <p><b> Who is the Creator? </b></p>
-          <p>What is this project? </p>
-          <p>What is 10I?</p>
-          <p>Instagram</p>
+        
+
       </div>
   </div>
 
@@ -187,6 +193,66 @@ paint.addEventListener("click", function () {
       GamesPopup.classList.remove("show");
     }
     });
+
+
+
+
+
+
+
+    var canvas = document.getElementById('paintCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // Get the color boxes
+    var colorBoxes = document.querySelectorAll('.color-box');
+
+    // Variables to track mouse movements
+    var painting = false;
+    var lastX = 0;
+    var lastY = 0;
+    var currentColor = '#000000'; // Default color
+
+    // Function to start painting
+    function startPainting(e) {
+        painting = true;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+    }
+
+    // Function to stop painting
+    function stopPainting() {
+        painting = false;
+    }
+
+    // Function to draw
+    function draw(e) {
+        if (!painting) return;
+        ctx.strokeStyle = currentColor; // Set current color
+        ctx.lineWidth = 5; // Set line width
+        ctx.lineCap = 'round'; // Set line cap style
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY); // Start from
+        ctx.lineTo(e.offsetX, e.offsetY); // Go to
+        ctx.stroke(); // Draw the path
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+    }
+
+    // Event listener for color boxes
+    colorBoxes.forEach(function(colorBox) {
+        colorBox.addEventListener('click', function() {
+            currentColor = this.getAttribute('data-color'); // Set current color
+        });
+    });
+
+    // Event listeners for canvas
+    canvas.addEventListener('mousedown', startPainting);
+    canvas.addEventListener('mouseup', stopPainting);
+    canvas.addEventListener('mouseout', stopPainting);
+    canvas.addEventListener('mousemove', draw);
+
+
+
+
+
 
 
         
