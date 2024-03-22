@@ -40,9 +40,9 @@
       
         <img id="explorer" class="draggable-box" draggable="true" src="img/InternetExplorer.png" /> 
       
-        <img id="explorer2" class="draggable-box" draggable="true" src="img/InternetExplorer.png" /> 
+        <img id="Mahjong" class="draggable-box" draggable="true" src="img/Mahjongnewww.png" /> 
 
-        <img id="explorer3" class="draggable-box" draggable="true" src="img/InternetExplorer.png" /> 
+        <img id="calculator" class="draggable-box" draggable="true" src="img/calcnew.png" /> 
 
         <img id="games" class="draggable-box" draggable="true"  src="img/GamesNEw.png"/> 
 
@@ -129,12 +129,44 @@
                         </h2>
                         <table id=grid>
                         </table>
-                        <BUTTON onclick="generateGrid();">Reset Grid</BUTTON>
+                        <BUTTON onclick="generateGrid();">Reset</BUTTON>
 
                 </div>
               </div>
 
 
+
+    <div id="CalcPopup" class="popup">
+      <div id="popup-contentcalculator">
+              <h2 style="color: #d50a00; margin-top: 2%;margin-bottom: 2%">
+                <i> calculator </i>
+              </h2>
+
+              <div id="calculatorr">
+              <input type="text" id="result" readonly><br>
+              <input type="button" value="1" onclick="appendToResult('1')">
+              <input type="button" value="2" onclick="appendToResult('2')">
+              <input type="button" value="3" onclick="appendToResult('3')">
+              <input type="button" value="+" onclick="appendToResult('+')"><br>
+              <input type="button" value="4" onclick="appendToResult('4')">
+              <input type="button" value="5" onclick="appendToResult('5')">
+              <input type="button" value="6" onclick="appendToResult('6')">
+              <input type="button" value="-" onclick="appendToResult('-')"><br>
+              <input type="button" value="7" onclick="appendToResult('7')">
+              <input type="button" value="8" onclick="appendToResult('8')">
+              <input type="button" value="9" onclick="appendToResult('9')">
+              <input type="button" value="*" onclick="appendToResult('*')"><br>
+              <input type="button" value="0" onclick="appendToResult('0')">
+              <input type="button" value="." onclick="appendToResult('.')">
+              <input type="button" value="=" onclick="calculate()">
+              <input type="button" value="/" onclick="appendToResult('/')"><br>
+              <input type="button" value="X" onclick="clearResult()">
+              
+              </div>
+
+       
+            </div>
+          </div> 
 
 
 
@@ -238,10 +270,28 @@ paint.addEventListener("click", function () {
 
 
 
+    calculator.addEventListener("click", function () {
+      CalcPopup.classList.add("show");
+});
+
+window.addEventListener("click", function (event) {
+    if (event.target == CalcPopup) {
+      CalcPopup.classList.remove("show");
+    }
+    });
 
 
 
 
+
+
+
+
+
+
+
+
+  
 
     var canvas = document.getElementById('paintCanvas');
     var ctx = canvas.getContext('2d');
@@ -399,6 +449,25 @@ function markCell(cell) {
 }
 
         
+
+
+
+
+function appendToResult(value) {
+            document.getElementById("result").value += value;
+        }
+        
+        function calculate() {
+            try {
+                document.getElementById("result").value = eval(document.getElementById("result").value);
+            } catch (error) {
+                document.getElementById("result").value = "Error";
+            }
+        }
+        
+        function clearResult() {
+            document.getElementById("result").value = "";
+        }
         
         </script>
     </body>
