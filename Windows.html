@@ -21,18 +21,20 @@
     </head>
 
     <body id="bodyhomepage">
+
+      <a href="index.html">
+        <img id="logowindows" src="img/10Ipng.png" draggable="false" />
+    </a>
       <div id="outlinee"> </div>
     
         <div id="DivWindows">
-                <a href="index.html">
-                    <img id="logowindows" src="img/10Ipng.png" draggable="false" />
-                </a>
+                
                
                     <img id="windows" src="img/Windows98NEWWW.jpg" draggable="false" />
 
                     
                 
-        </div id="WindowsPage">
+        </div>
         
         <img id="paint" class="draggable-box" draggable="true" src="img/PaintpngNEWWW.png"  />
       
@@ -46,7 +48,7 @@
 
         <img id="clippy" src="img/Clippynew.png" draggable="false"/>
 
-        <img id="Stikcy" class="draggable-box" draggable="true" src="img/stickynotesN.png" />
+        <img id="Minesweeper" class="draggable-box" draggable="true" src="img/Minesweeper_200510I.png" />
 
         <img id="Stikcy2" class="draggable-box" draggable="true" src="img/stickynotesN.png" />
 
@@ -110,14 +112,27 @@
 
 
     <div id="GamesPopup" class="popup">
-      <div class="popup-content">
+      <div id="popup-contentgame">
               <h2>
                 <i> Games </i>
               </h2>
-        
 
-      </div>
-  </div>
+
+       
+            </div>
+          </div> 
+
+              <div id="MinesweeperPopup" class="popup">
+                <div id="popup-contentMinesweeper">
+                        <h2>
+                          <i> Minesweeper </i>
+                        </h2>
+                        <table id=grid>
+                        </table>
+                        <BUTTON onclick="generateGrid();">Reset Grid</BUTTON>
+
+                </div>
+              </div>
 
 
 
@@ -209,6 +224,22 @@ paint.addEventListener("click", function () {
 
 
 
+    Minesweeper.addEventListener("click", function () {
+      MinesweeperPopup.classList.add("show");
+});
+
+    window.addEventListener("click", function (event) {
+    if (event.target == MinesweeperPopup) {
+      MinesweeperPopup.classList.remove("show");
+    }
+    });
+
+
+
+
+
+
+
 
 
 
@@ -266,6 +297,106 @@ paint.addEventListener("click", function () {
 
 
 
+
+
+
+
+
+    var grid = document.getElementById("grid");
+var testMode = false; //Turn this variable to true to see where the mines are
+generateGrid();
+
+function generateGrid() {
+  //generate 10 by 10 grid
+  grid.innerHTML="";
+  for (var i=0; i<10; i++) {
+    row = grid.insertRow(i);
+    for (var j=0; j<10; j++) {
+      cell = row.insertCell(j);
+      cell.onclick = function() { clickCell(this); };
+      cell.oncontextmenu = function() { markCell(this); return false; }; // Prevent default context menu on right click
+      var mine = document.createAttribute("data-mine");       
+      mine.value = "false";             
+      cell.setAttributeNode(mine);
+    }
+  }
+  addMines();
+}
+
+function addMines() {
+  //Add mines randomly
+  for (var i=0; i<20; i++) {
+    var row = Math.floor(Math.random() * 10);
+    var col = Math.floor(Math.random() * 10);
+    var cell = grid.rows[row].cells[col];
+    cell.setAttribute("data-mine","true");
+    if (testMode) cell.innerHTML="X";
+  }
+}
+
+function revealMines() {
+    //Highlight all mines in red
+    for (var i=0; i<10; i++) {
+      for(var j=0; j<10; j++) {
+        var cell = grid.rows[i].cells[j];
+        if (cell.getAttribute("data-mine")=="true" && cell.innerHTML != "F") cell.className="mine";
+      }
+    }
+}
+
+function checkLevelCompletion() {
+  var levelComplete = true;
+    for (var i=0; i<10; i++) {
+      for(var j=0; j<10; j++) {
+        if ((grid.rows[i].cells[j].getAttribute("data-mine")=="false") && (grid.rows[i].cells[j].innerHTML=="")) levelComplete=false;
+      }
+  }
+  if (levelComplete) {
+    alert("You Win!");
+    revealMines();
+  }
+}
+
+function clickCell(cell) {
+  //Check if the end-user clicked on a mine
+  if (cell.getAttribute("data-mine")=="true") {
+    revealMines();
+    alert("Game Over");
+  } else {
+    cell.className="clicked";
+    //Count and display the number of adjacent mines
+    var mineCount=0;
+    var cellRow = cell.parentNode.rowIndex;
+    var cellCol = cell.cellIndex;
+    //alert(cellRow + " " + cellCol);
+    for (var i=Math.max(cellRow-1,0); i<=Math.min(cellRow+1,9); i++) {
+      for(var j=Math.max(cellCol-1,0); j<=Math.min(cellCol+1,9); j++) {
+        if (grid.rows[i].cells[j].getAttribute("data-mine")=="true") mineCount++;
+      }
+    }
+    cell.innerHTML=mineCount;
+    if (mineCount==0) { 
+      //Reveal all adjacent cells as they do not have a mine
+      for (var i=Math.max(cellRow-1,0); i<=Math.min(cellRow+1,9); i++) {
+        for(var j=Math.max(cellCol-1,0); j<=Math.min(cellCol+1,9); j++) {
+          //Recursive Call
+          if (grid.rows[i].cells[j].innerHTML=="") clickCell(grid.rows[i].cells[j]);
+        }
+      }
+    }
+    checkLevelCompletion();
+  }
+}
+
+function markCell(cell) {
+  if (cell.innerHTML == "") {
+    cell.innerHTML = "F"; // Place flag
+    cell.className = "flagged";
+  } else if (cell.innerHTML == "F") {
+    cell.innerHTML = ""; // Remove flag
+    cell.className = "";
+  }
+}
 
         
         
