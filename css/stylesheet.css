@@ -445,5 +445,6 @@ p {
     text-align: center; /* Center text horizontally */
     margin-left: 5%;
     width: 90%;
+    filter: saturate(140%);
 
 }
