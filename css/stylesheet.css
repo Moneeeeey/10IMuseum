@@ -237,6 +237,15 @@ a {
     border-radius: 1px;
     box-shadow: inset 0 0 0 20px #ffffff;
 }
+#popup-contentmahjong{
+    background-color: #d50a00;
+    filter: saturate(70%) ;
+    margin: 3% auto;  
+    width: 40%;
+    height: 80%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 0 20px #ffffff;
+}
 
 .popup-contentpaint {
     background-color: #d50a00;

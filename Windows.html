@@ -107,6 +107,19 @@
     </div>
 
 
+    <div id="MahjongPopup" class="popup">
+      <div id="popup-contentmahjong">
+              <h2>
+       
+              </h2>
+              <a href="https://www.free-play-mahjong.com/" target="_blank"> <img id="Poster" src="img/Mahjong.png"/></a>
+
+       
+            </div>
+          </div> 
+
+    
+
 
 
     <div id="GamesPopup" class="popup">
@@ -285,6 +298,19 @@ window.addEventListener("click", function (event) {
     }
     });
 
+
+
+
+
+    Mahjong.addEventListener("click", function () {
+      MahjongPopup.classList.add("show");
+});
+
+window.addEventListener("click", function (event) {
+    if (event.target == MahjongPopup) {
+      MahjongPopup.classList.remove("show");
+    }
+    });
 
 
 
