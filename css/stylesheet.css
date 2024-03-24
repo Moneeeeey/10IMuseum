@@ -156,13 +156,13 @@ a {
 
 #Mahjong{
     top: 150px;
-    left: 350px;
+    left: 25%;
     width: 100px;
     z-index: 999;
 }
 #calculator{
     top: 300px;
-    left: 320px;
+    left: 23%;
     width: 150px;
     z-index: 999;
 }
