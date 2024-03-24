@@ -440,3 +440,10 @@ p {
     margin: auto; /* Center horizontally */
     text-align: center; /* Center text horizontally */
 }
+#Poster{
+    margin: auto; /* Center horizontally */
+    text-align: center; /* Center text horizontally */
+    margin-left: 5%;
+    width: 90%;
+
+}
