@@ -50,9 +50,9 @@
 
         <img id="Minesweeper" class="draggable-box" draggable="true" src="img/Minesweeper_200510I.png" />
 
-        <img id="Stikcy2" class="draggable-box" draggable="true" src="img/stickynotesN.png" />
+        <!--  <img id="Stikcy2" class="draggable-box" draggable="true" src="img/stickynotesN.png" />
 
-        <img id="Stikcy3" class="draggable-box" draggable="true" src="img/stickynotesN.png" />
+        <img id="Stikcy3" class="draggable-box" draggable="true" src="img/stickynotesN.png" /> -->
 
         <img id="Stikcy4" class="draggable-box" draggable="true" src="img/stickynotesN.png" />
 
@@ -60,13 +60,11 @@
 
 
         <div id="clippyPopup" class="popup">
-            <div class="popup-content">
-                    <h2 style="margin-top: 20px; text-align: center; ">
-                      <i> CLIPPY </i>
-                    </h2>
-                <p><b> Who is the Creator? </b></p>
-                <p>What is this project? </p>
-                <p>What is 10I?</p>
+            <div id="popup-contentabout">
+
+              <img id="posterabout"  src="img/ABOUT.png"  />
+                  
+                   
                 <img id="instagramicon" src="img/icons8-instagram-240.png"  draggable="false">
                 <img id="behanceicon" src="img/icons8-behance-240.png"  draggable="false">
                 <img id="linkedinicon" src="img/icons8-linkedin-240.png"  draggable="false">
@@ -76,10 +74,10 @@
 
         <div id="paintPopup" class="popup">
           <div id="popup-contentpaint">
-                  <h2 style="margin-top: 40px; text-align: right; margin-right: 5%;">
-                    <img id="paintwindows"  src="img/PaintpngNEWWW.png"  />
-                    <i> PAINT! </i>
-                  </h2>
+                    <img id="posterpaint"  src="img/PaintPoster.png"  />
+                  
+
+
                     <div id="canvas-container">
                       <canvas id="paintCanvas" width="1130" height="460"> </canvas>
                     </div>
@@ -101,8 +99,8 @@
         
       <div id="explorerPopup" class="popup">
         <div id="popup-contentexplorer">
-                <br><br><br><br><br><br>
-                <img id="PosterExplorer" src="img/Artboard 3.png"/>
+                <br>
+                <img id="PosterExplorer" src="img/Internet ExplorerPoster.png"/>
         </div>
     </div>
 
@@ -112,7 +110,7 @@
               <h2>
        
               </h2>
-              <a href="https://www.free-play-mahjong.com/" target="_blank"> <img id="Poster" src="img/Mahjong.png"/></a>
+              <a href="https://www.free-play-mahjong.com/" target="_blank"> <img id="Poster" src="img/MahjongPoster.png"/></a>
 
        
             </div>
@@ -127,7 +125,7 @@
               <h2>
        
               </h2>
-              <img id="Poster" src="img/gamesdraft1.png"/>
+              <img id="Poster" src="img/GamesPoster.png"/>
 
        
             </div>
@@ -135,20 +133,15 @@
 
               <div id="MinesweeperPopup" class="popup">
                 <div id="popup-contentMinesweeper">
-                        <h2>
-                          <i> Minesweeper </i>
-                        </h2>
-                       <h4>  Microsoft Minesweeper is a minesweeper-type video game created by Curt Johnson, originally for IBM's OS/2, that was ported to Microsoft Windows by Robert Donner, both Microsoft employees at the time.</h4>
-
-                       <h2> Did You Know?</h2>
-                       Minesweeper Was Initially Designed As A Tool To Teach People How To Use A Mouse.
+                        
+                        <img id="PosterMinesweeper" src="img/MinesweeperPoster.png"/>
 
 
-                       The Game Was Banned In Some Countries, Including China, Because It Was Seen As A Symbol Of The Vietnam War.
+                       
                         <table id=grid>
                         </table>
-                        <BUTTON onclick="generateGrid();">Reset</BUTTON>
-
+                        <BUTTON onclick="generateGrid();" id="button">Reset</BUTTON>
+                   
                 </div>
               </div>
 

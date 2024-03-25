@@ -217,13 +217,13 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
     display: none;
 }
-.popup-content {
+#popup-contentabout {
     background-color: #d50a00;
     filter: saturate(70%) ;
-    margin: 10% auto;
+    margin: 2% auto;
     padding: 20px;
     width: 50%;
-    height: 50%;
+    height: 90%;
     border-radius: 1px;
     box-shadow: inset 0 0 0 20px #ffffff;
 }
@@ -260,10 +260,10 @@ a {
 #popup-contentexplorer{
     background-color: #ffffff;
     filter: saturate(70%) ;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 20px;
-    width: 80%;
-    height: 150%;
+    width: 50%;
+    height: 80%;
     border-radius: 1px;
     box-shadow: inset 0 0 0 20px #d50a00;
 }
@@ -329,10 +329,10 @@ a {
 #popup-contentMinesweeper{
     background-color: #d50a00;
     filter: saturate(70%) ;
-    margin: 5% auto;
+    margin: 2% auto;
     padding: 20px;
-    width: 85%;
-    height: 150%;
+    width: 40%;
+    height: 90%;
     border-radius: 1px;
     box-shadow: inset 0 0 0 20px #ffffff;
 }
@@ -359,7 +359,8 @@ a {
 }
 #Colors{
     margin-left: 42%;
-    margin-top: .6%;
+   margin-top: -45%;
+   z-index: 999;
 }
 p {
     font-family: Helvetica, sans-serif;
@@ -368,10 +369,10 @@ p {
 #instagramicon{
     width: 60px;
     place-items: center;
-    position: absolute;
-    z-index: 10;
-    margin-left: 27%;
-    margin-top: 1rem;
+    position: relative;
+    z-index: 110;
+    margin-left: 7%;
+    margin-top: -10rem;
 }
 #behanceicon{
     width: 60px;
@@ -399,8 +400,16 @@ p {
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    height: 40%;
+    height: 30%;
+    position: relative;
+    margin-top: -60%;
+    z-index: 999;
+    background-color: #d50a00;
   }
+  #button{
+    z-index: 999;
+  }
+
   
   #grid TR TD{
     border:1px solid white;
@@ -458,8 +467,25 @@ p {
 
 }
 #PosterExplorer{
-    margin: auto; /* Center horizontally */
-    text-align: center; /* Center text horizontally */
+    width: 105%;
+    margin-top: -3%;
+    margin-left: -2.5%;
+    
+    filter: saturate(140%);
+}
+#PosterMinesweeper{
+    margin: 5% auto; 
+    margin-left: 5%;
+    width: 90%;
+    filter: saturate(140%);
+}
+#posterpaint{
+    width: 100%;
+    filter: saturate(140%);
+    z-index: -1;
+}
+#posterabout{
+    margin: 2.5% auto; 
     margin-left: 5%;
     width: 90%;
     filter: saturate(140%);
