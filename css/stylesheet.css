@@ -372,7 +372,7 @@ p {
     position: relative;
     z-index: 110;
     margin-left: 7%;
-    margin-top: -10rem;
+    margin-top: -0rem;
 }
 #behanceicon{
     width: 60px;
@@ -485,17 +485,16 @@ p {
     z-index: -1;
 }
 #posterabout{
-    margin: 2.5% auto; 
-    margin-left: 5%;
-    width: 90%;
-    filter: saturate(140%);
+    width: 105%;
+    margin:-3% ;
+    filter: saturate(160%);
 }
 #PosterMediaplayer{
     margin: auto; 
     width: 140%;
     margin-top: -5%;
     margin-left: -25%;
-    filter: saturate(150%);
+    filter: saturate(160%);
     z-index: -4;
     
 
