@@ -140,7 +140,7 @@ a {
     z-index: 999;
 }
 #paint{
-    width: 80px;
+    width: 100px;
     top: 300px;
     left: 10%;
     z-index: 999;
@@ -148,28 +148,28 @@ a {
 }
 
 #explorer{
-    top: 150px;
+    top: 120px;
     left: 10%;
-    width: 80px;
+    width: 100px;
     z-index: 999;
 }
 
 #Mahjong{
-    top: 150px;
+    top: 110px;
     left: 24%;
-    width: 100px;
+    width: 110px;
     z-index: 999;
 }
 #calculator{
-    top: 300px;
+    top: 310px;
     left: 24.5%;
-    width: 70px;
+    width: 80px;
     z-index: 999;
 }
 #games{
-    top: 450px;
+    top: 480px;
     left: 10%;
-    width: 80px;
+    width: 110px;
     z-index: 999;
 }
 #Windowsicon{
@@ -283,9 +283,9 @@ a {
 
 }
 #Minesweeper{
-    width: 80px;
+    width: 110px;
     height: auto;
-    top: 590px;
+    top: 650px;
     left: 10%;
     z-index: 999;
 }
