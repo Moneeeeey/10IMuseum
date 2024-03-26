@@ -107,9 +107,8 @@ a {
 
 #logowindows {
     width: 100px;
-    height: auto;
-    margin-left: 46%;
-    margin-top: 8.5px;
+    left: 47%;
+    top: 3%;
     position: absolute;
     z-index: 999;
     background-color: #ffffff;
