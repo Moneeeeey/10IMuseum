@@ -1,10 +1,10 @@
-body{
+body {
     background-color: #ffffff;
 }
-footer{
 
-}
-#logo{
+footer {}
+
+#logo {
     width: 100px;
     height: auto;
     position: relative;
@@ -12,58 +12,63 @@ footer{
     margin-left: auto;
     margin-right: auto;
     z-index: 99;
-    top: 10px;    
-   
+    top: 10px;
+
 }
 
-h1{
+h1 {
     color: #ff0000;
-    padding-top:12% ;
+    padding-top: 12%;
     font-size: 85px;
     font-family: "JetBrains Mono", monospace;
     position: absolute;
     z-index: 119;
-    text-align: center; mix-blend-mode: exclusion;
+    text-align: center;
+    mix-blend-mode: exclusion;
     text-decoration: none;
-    
+
 }
-a{
+
+a {
     text-decoration: none;
     color: #ffffff;
     z-index: 55;
 }
 
-h2{
-text-align: center;
-font-size: 60px;
-margin-top: 0;
-color: #ffffff ; 
-font-family: "Libre Caslon Text", serif;
-margin: auto; /* Center horizontally */
-text-align: center; /* Center text horizontally */
-}
-p{
+h2 {
     text-align: center;
-    color: #ffffff ; 
+    font-size: 60px;
+    margin-top: 0;
+    color: #ffffff;
+    font-family: "Libre Caslon Text", serif;
+    margin: auto;
+    /* Center horizontally */
+    text-align: center;
+    /* Center text horizontally */
+}
+
+p {
+    text-align: center;
+    color: #ffffff;
     font-family: "Libre Caslon Text", serif;
 }
 
-#SplashPageWindows{
-   
+#SplashPageWindows {
+
     width: 106%;
     height: 100%;
-    display: block; 
-    object-fit:cover ; 
-    position: fixed;  
-  
+    display: block;
+    object-fit: cover;
+    position: fixed;
+
 
 }
 
 .container {
     width: 100%;
     height: 100vh;
-    object-fit:cover ;
-    position: relative; 
+    object-fit: cover;
+    position: relative;
     margin: 0;
     padding: 0;
 }
@@ -71,13 +76,13 @@ p{
 .overlap-box {
     width: 100%;
     position: fixed;
-    top: 0vh; 
+    top: 0vh;
     left: 0;
-    z-index: -1;   
+    z-index: -1;
     mix-blend-mode: exclusion;
 }
 
-#outline{
+#outline {
     width: 100%;
     height: 100vh;
     box-shadow: inset 0 0 0 150px white;
@@ -85,94 +90,101 @@ p{
     margin: -10px;
     padding-right: 20px;
     overflow-y: hidden;
-    
+
 }
-#outlinee{
+
+#outlinee {
     width: 100%;
-    height: 100% ;
+    height: 100%;
     box-shadow: inset 0 0 0 5vh white;
     z-index: 1;
     position: absolute;
 }
+
 a {
     text-decoration: none;
 }
 
-#logowindows{
-    width: 100px; 
+#logowindows {
+    width: 100px;
     height: auto;
     margin-left: 46%;
     margin-top: 8.5px;
-    position: absolute ;
+    position: absolute;
     z-index: 999;
     background-color: #ffffff;
 
 
 }
-#windows{
+
+#windows {
     width: 106%;
     height: 100%;
-    position: fixed; 
+    position: fixed;
     margin: 0;
     padding: 0;
-    display: block; 
-    object-fit:cover ;
+    display: block;
+    object-fit: cover;
     filter: saturate(75%)
-    
 }
 
-#kir{
+#kir {
     width: 100%;
     box-shadow: inset 0 0 0 15px white;
     z-index: 999;
 }
 
-#bodyhomepage{
+#bodyhomepage {
     margin: 0px;
     height: 100%;
     overflow-y: hidden;
 }
-#PaintIcon{
-    width: 0px; 
+
+#PaintIcon {
+    width: 0px;
     height: auto;
     align-items: center;
-    position: absolute ;
+    position: absolute;
     z-index: 999;
 }
-#paint{
+
+#paint {
     width: 100px;
     top: 300px;
     left: 10%;
     z-index: 999;
-    position: absolute ;
+    position: absolute;
 }
 
-#explorer{
+#explorer {
     top: 120px;
     left: 10%;
     width: 100px;
     z-index: 999;
 }
 
-#Mahjong{
+#Mahjong {
     top: 110px;
     left: 24%;
     width: 110px;
     z-index: 999;
 }
-#calculator{
+
+#calculator {
     top: 310px;
     left: 24.5%;
     width: 80px;
     z-index: 999;
 }
-#games{
+
+#games {
     top: 480px;
     left: 10%;
     width: 110px;
     z-index: 999;
 }
-#Windowsicon{
+
+#Windowsicon {
     width: 100px;
     left: 50px;
     top: 83%;
@@ -189,21 +201,22 @@ a {
 
     color: #ffffff;
     z-index: 999;
-    mix-blend-mode:exclusion;
+    mix-blend-mode: exclusion;
 }
 
-.draggable-box{
+.draggable-box {
     position: absolute;
     cursor: grab;
 }
-#clippy{
-    width: 300px; 
+
+#clippy {
+    width: 300px;
     height: auto;
     align-items: center;
-    position: absolute ;
+    position: absolute;
     z-index: 999;
     right: 1%;
-    top:80%; 
+    top: 80%;
 }
 
 .popup {
@@ -217,9 +230,10 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
     display: none;
 }
+
 #popup-contentabout {
     background-color: #d50a00;
-    filter: saturate(70%) ;
+    filter: saturate(70%);
     margin: 2% auto;
     padding: 20px;
     width: 50%;
@@ -228,19 +242,20 @@ a {
     box-shadow: inset 0 0 0 20px #ffffff;
 }
 
-#popup-contentgame{
+#popup-contentgame {
     background-color: #d50a00;
-    filter: saturate(70%) ;
-    margin: 3% auto;  
+    filter: saturate(70%);
+    margin: 3% auto;
     width: 40%;
     height: 90%;
     border-radius: 1px;
     box-shadow: inset 0 0 0 20px #ffffff;
 }
-#popup-contentmahjong{
+
+#popup-contentmahjong {
     background-color: #d50a00;
-    filter: saturate(70%) ;
-    margin: 3% auto;  
+    filter: saturate(70%);
+    margin: 3% auto;
     width: 40%;
     height: 80%;
     border-radius: 1px;
@@ -249,7 +264,7 @@ a {
 
 .popup-contentpaint {
     background-color: #d50a00;
-    filter: saturate(70%) ;
+    filter: saturate(70%);
     margin: 10% auto;
     padding: 20px;
     width: 50%;
@@ -257,9 +272,10 @@ a {
     border-radius: 1px;
     box-shadow: inset 0 0 0 20px #ffffff;
 }
-#popup-contentexplorer{
+
+#popup-contentexplorer {
     background-color: #ffffff;
-    filter: saturate(70%) ;
+    filter: saturate(70%);
     margin: 5% auto;
     padding: 20px;
     width: 50%;
@@ -267,9 +283,10 @@ a {
     border-radius: 1px;
     box-shadow: inset 0 0 0 20px #d50a00;
 }
-#popup-contentcalculator{
+
+#popup-contentcalculator {
     background-color: #ffffff;
-    filter: saturate(70%) ;
+    filter: saturate(70%);
     margin: 3% auto;
     padding: 20px;
     width: 30%;
@@ -282,28 +299,32 @@ a {
     display: block;
 
 }
-#Minesweeper{
+
+#Minesweeper {
     width: 110px;
     height: auto;
     top: 650px;
     left: 10%;
     z-index: 999;
 }
-#Stikcy2{
+
+#Stikcy2 {
     width: 110px;
     top: 420px;
     right: 8%;
     position: absolute;
     z-index: 999;
 }
-#Stikcy3{
+
+#Stikcy3 {
     width: 110px;
     top: 270px;
     right: 8%;
     position: absolute;
     z-index: 999;
 }
-#Stikcy4{
+
+#Stikcy4 {
     width: 110px;
     top: 110px;
     right: 8%;
@@ -311,13 +332,14 @@ a {
     z-index: 999;
 
 }
-#WindowsPage{
+
+#WindowsPage {
     position: fixed;
 }
 
 #popup-contentpaint {
     background-color: #d50a00;
-    filter: saturate(70%) ;
+    filter: saturate(70%);
     margin: 5% auto;
     padding: 20px;
     width: 80%;
@@ -326,9 +348,9 @@ a {
     box-shadow: inset 0 0 0 20px #ffffff;
 }
 
-#popup-contentMinesweeper{
+#popup-contentMinesweeper {
     background-color: #d50a00;
-    filter: saturate(70%) ;
+    filter: saturate(70%);
     margin: 2% auto;
     padding: 20px;
     width: 40%;
@@ -338,12 +360,12 @@ a {
 }
 
 
-#paintCanvas{
+#paintCanvas {
     background-color: #ffffff;
     position: absolute;
-     z-index: 0; 
-    top:55%;
-    left:50%;
+    z-index: 0;
+    top: 55%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -355,40 +377,47 @@ a {
     margin-top: 66%;
     cursor: pointer;
     border: 2px solid #ffffff;
-    
+
 }
-#Colors{
-    margin-left: 42%;
-   margin-top: -45%;
-   z-index: 999;
+
+#Colors {
+    position: absolute;
+    top: 74%;
+    left: 27%;
+    z-index: 0;
 }
+
 p {
     font-family: Helvetica, sans-serif;
     font-size: 30px;
 }
-#instagramicon{
+
+/* #instagramicon {
     width: 60px;
     place-items: center;
     position: relative;
     z-index: 110;
     margin-left: 7%;
     margin-top: -0rem;
-}
-#behanceicon{
+} */
+
+/* #behanceicon {
     width: 60px;
     place-items: center;
     position: absolute;
     z-index: 10;
     margin-left: 60%;
     margin-top: 1rem;
-    
-}
-#linkedinicon{
+
+} */
+
+/* #linkedinicon {
     width: 60px;
     margin-left: 46%;
     margin-top: 1rem;
-}
-#paintwindows{
+} */
+
+#paintwindows {
     width: 60px;
 }
 
@@ -405,47 +434,52 @@ p {
     margin-top: -60%;
     z-index: 999;
     background-color: #d50a00;
-  }
-  #button{
-    z-index: 999;
-  }
+}
 
-  
-  #grid TR TD{
-    border:1px solid white;
+#button {
+    z-index: 999;
+    position: absolute;
+    left: -2%;
+}
+
+
+#grid TR TD {
+    border: 1px solid white;
     background: #999999;
     width: 16px;
     height: 16px;
     text-align: center;
-  }
-  
-  #grid TR TD.clicked {
-      background: #ffffff;
-  }
-  
-  #grid TR TD.mine {
-      background: #d50a00;
-  }
-  #grid TR TD.flagged {
+}
+
+#grid TR TD.clicked {
+    background: #ffffff;
+}
+
+#grid TR TD.mine {
+    background: #d50a00;
+}
+
+#grid TR TD.flagged {
     background: #FFFF00;
 }
 
-  
-  BUTTON {
+
+BUTTON {
     margin: 12px;
     text-align: center;
     margin-left: 47%;
-  }
+}
 
 
 
-  input[type="button"] {
+input[type="button"] {
     width: 50px;
     height: 50px;
     font-size: 20px;
     margin: 5px;
     font-family: "JetBrains Mono", monospace;
 }
+
 #result {
     width: 212px;
     height: 50px;
@@ -453,57 +487,79 @@ p {
     margin: 5px;
 }
 
-#calculatorr{
-    margin: auto; /* Center horizontally */
-    text-align: center; /* Center text horizontally */
+#calculatorr {
+    margin: auto;
+    /* Center horizontally */
+    text-align: center;
+    /* Center text horizontally */
 }
-#Poster{
+
+#Poster {
     margin-top: 1%;
-    text-align: center; /* Center text horizontally */
-   
+    text-align: center;
+    /* Center text horizontally */
+
     align-items: center;
     width: 100%;
     filter: saturate(140%);
 
 }
-#PosterExplorer{
+
+#PosterExplorer {
     width: 105%;
     margin-top: -3%;
     margin-left: -2.5%;
-    
+
     filter: saturate(140%);
 }
-#PosterMinesweeper{
-    margin: 5% auto; 
+
+#PosterMinesweeper {
+    margin: 5% auto;
     margin-left: 5%;
     width: 90%;
     filter: saturate(140%);
 }
-#posterpaint{
+
+#posterpaint {
     width: 100%;
     filter: saturate(140%);
     z-index: -1;
 }
-#posterabout{
+
+#posterabout {
     width: 105%;
-    margin:-2% ;
+    margin: -2%;
     filter: saturate(160%);
 }
-#PosterMediaplayer{
-    margin: auto; 
+
+#PosterMediaplayer {
+    margin: auto;
     width: 140%;
     margin-top: -5%;
     margin-left: -25%;
     filter: saturate(160%);
     z-index: -4;
-    
+
 
 }
-#youtubevideo{
- width: 122%;
- height: 33%;
- z-index: 919;
- position: absolute;
- margin-top: -100%;
- margin-left: -20%;
+
+#youtubevideo {
+    width: 122%;
+    height: 33%;
+    z-index: 919;
+    position: absolute;
+    margin-top: -100%;
+    margin-left: -20%;
+}
+
+#social-media-links {
+    display: flex;
+    position: absolute; 
+    left: 40%;
+    top: 89.5%;
+
+}
+
+#social-media-links img {
+    max-width: 60px;
 }
