@@ -42,22 +42,13 @@
       
         <img id="Mahjong" class="draggable-box" draggable="true" src="img/Mahjongnewww.png" /> 
 
-        <img id="calculator" class="draggable-box" draggable="true" src="img/calcnew.png" /> 
+        <img id="calculator" class="draggable-box" draggable="true" src="img/MediaIcon.png" /> 
 
         <img id="games" class="draggable-box" draggable="true"  src="img/GamesNEw.png"/> 
 
         <img id="clippy" src="img/Clippynew.png" draggable="false"/>
 
         <img id="Minesweeper" class="draggable-box" draggable="true" src="img/Minesweeper_200510I.png" />
-
-        <!--  <img id="Stikcy2" class="draggable-box" draggable="true" src="img/stickynotesN.png" />
-
-        <img id="Stikcy3" class="draggable-box" draggable="true" src="img/stickynotesN.png" /> -->
-
-        <img id="Stikcy4" class="draggable-box" draggable="true" src="img/stickynotesN.png" />
-
-        <!--  <img id="Windowsicon" class="draggable-box" draggable="true" src="img/windows-7-logo-6718525_128.png" /> -->
-
 
         <div id="clippyPopup" class="popup">
             <div id="popup-contentabout">
@@ -149,31 +140,12 @@
 
     <div id="CalcPopup" class="popup">
       <div id="popup-contentcalculator">
-              <h2 style="color: #d50a00; margin-top: 2%;margin-bottom: 2%">
-                <i> calculator </i>
-              </h2>
-
-              <div id="calculatorr">
-              <input type="text" id="result" readonly><br>
-              <input type="button" value="1" onclick="appendToResult('1')">
-              <input type="button" value="2" onclick="appendToResult('2')">
-              <input type="button" value="3" onclick="appendToResult('3')">
-              <input type="button" value="+" onclick="appendToResult('+')"><br>
-              <input type="button" value="4" onclick="appendToResult('4')">
-              <input type="button" value="5" onclick="appendToResult('5')">
-              <input type="button" value="6" onclick="appendToResult('6')">
-              <input type="button" value="-" onclick="appendToResult('-')"><br>
-              <input type="button" value="7" onclick="appendToResult('7')">
-              <input type="button" value="8" onclick="appendToResult('8')">
-              <input type="button" value="9" onclick="appendToResult('9')">
-              <input type="button" value="*" onclick="appendToResult('*')"><br>
-              <input type="button" value="0" onclick="appendToResult('0')">
-              <input type="button" value="." onclick="appendToResult('.')">
-              <input type="button" value="=" onclick="calculate()">
-              <input type="button" value="/" onclick="appendToResult('/')"><br>
-              <input type="button" value="X" onclick="clearResult()">
               
-              </div>
+        <img id="PosterMediaplayer" src="img/Media Player.png"/>
+
+<iframe id="youtubevideo" src="https://www.youtube.com/embed/a3AsQZ7Tilg?si=q-oBFz7om3MyJzkdautoplay" frameborder="0" allowfullscreen></iframe>
+
+            
 
        
             </div>
@@ -475,24 +447,6 @@ function markCell(cell) {
         
 
 
-
-
-function appendToResult(value) {
-            document.getElementById("result").value += value;
-        }
-        
-        function calculate() {
-            try {
-                document.getElementById("result").value = eval(document.getElementById("result").value);
-            } catch (error) {
-                document.getElementById("result").value = "Error";
-            }
-        }
-        
-        function clearResult() {
-            document.getElementById("result").value = "";
-        }
-        
         </script>
     </body>
 
